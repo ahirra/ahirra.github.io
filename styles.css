@@ -54,7 +54,8 @@ body{
 
 /* Cards & sections */
 .card{background:var(--card);border-radius:var(--radius);padding:20px;margin:18px 0;border:1px solid #eee}
-.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
 .project{margin-bottom:12px}
 .pub-list{margin-left:1rem}
 .news-list{margin-left:1rem;color:var(--muted)}

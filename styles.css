@@ -2,7 +2,7 @@
 :root{
   --bg:#ffffff;
   --card:#fafafa;
-  --text:#222;
+  --text:#0f0e0e00;
   --muted:#666;
   --accent:#ff8d58;
   --glass: rgba(255,255,255,0.6);
@@ -24,7 +24,7 @@ body{
 }
 
 .page{min-height:100%;display:flex;flex-direction:column}
-.container{width:92%;max-width:var(--maxw);margin:0 auto;padding:28px 0 60px}
+.container{width:92%;max-width:var(--maxw);margin:0 auto;padding:8px 0 8px}
 
 /* Topbar */
 .topbar{border-bottom:1px solid #eee;background:linear-gradient(0deg, rgba(255,255,255,0.6), rgba(255,255,255,0.6));backdrop-filter: blur(4px)}

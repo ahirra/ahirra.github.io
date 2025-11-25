@@ -31,7 +31,7 @@ body{
 .topbar .inner{display:flex;align-items:center;justify-content:space-between;max-width:var(--maxw);margin:0 auto;padding:14px 18px}
 .brand{display:flex;gap:12px;align-items:center}
 .avatar{width:56px;height:56px;border-radius:10px;border:1px solid #eee}
-.brand h1{font-size:1.05rem;margin:0}
+.brand h1{font-size:1.05rem;margin:0;color:black}
 .tagline{font-size:.84rem;color:var(--muted);margin-top:3px}
 
 /* Nav */
@@ -45,7 +45,7 @@ body{
 /* Hero */
 .hero{padding:0px 0}
 .hero-inner{display:grid;gap:14px}
-.hero h2{font-size:1.8rem;margin:0}
+.hero h2{font-size:1.8rem;margin:0;color:black}
 .accent{color:var(--accent)}
 .lead{color:var(--muted);max-width:68ch}
 .hero-cta .btn{display:inline-block;margin-right:10px;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}

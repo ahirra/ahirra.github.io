@@ -4,7 +4,7 @@
   --card:#fafafa;
   --text:#222;
   --muted:#666;
-  --accent:#0b66ff;
+  --accent:#ff8d58;
   --glass: rgba(255,255,255,0.6);
   --radius:12px;
   --maxw:1100px;
@@ -76,6 +76,6 @@ body.dark{
   --card:#071017;
   --text:#e6eef6;
   --muted:#9fb1c3;
-  --accent:#58a6ff;
+  --accent:#ff8d58;
   border-color:rgba(255,255,255,0.04);
 }

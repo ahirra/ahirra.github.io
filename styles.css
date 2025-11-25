@@ -43,7 +43,7 @@ body{
 .menu-btn{display:none;background:transparent;border:0;font-size:1.2rem}
 
 /* Hero */
-.hero{padding:20px 0}
+.hero{padding:0px 0}
 .hero-inner{display:grid;gap:14px}
 .hero h2{font-size:1.8rem;margin:0}
 .accent{color:var(--accent)}

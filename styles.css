@@ -27,8 +27,32 @@ body{
 .container{width:92%;max-width:var(--maxw);margin:0 auto;padding:8px 0 8px}
 
 /* Topbar */
-.topbar{border-bottom:1px solid #eee;background:linear-gradient(0deg, rgba(255,255,255,0.6), rgba(255,255,255,0.6));backdrop-filter: blur(4px)}
-.topbar .inner{display:flex;align-items:center;justify-content:space-between;max-width:var(--maxw);margin:0 auto;padding:14px 18px}
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  border-bottom: 1px solid #eee;
+  background: linear-gradient(0deg, rgba(255,255,255,0.6), rgba(255,255,255,0.6));
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+}
+
+.topbar .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 14px 18px;
+}
+
+/* Push page down so content doesn’t get hidden */
+body {
+  padding-top: 90px;  /* adjust depending on header height */
+}
+
 .brand{display:flex;gap:12px;align-items:center}
 .avatar{width:56px;height:56px;border-radius:10px;border:1px solid #eee}
 .brand h1{font-size:1.05rem;margin:0;color:black}

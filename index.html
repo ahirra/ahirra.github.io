@@ -210,21 +210,19 @@
     <footer class="site-footer">
       <div class="inner">
         <p>© 2025 Rajesh K. Ahir — Built with ♥. Hosted on GitHub Pages.</p>
-          <div style="margin-top:20px; font-size:14px;">
-                  Page Visits: <span id="visit-count">0</span>
+          <div>
+            Page Visits: <span id="counter">Loading...</span>
           </div>
 
           <script>
-            let count = localStorage.getItem('page_visits');
-
-            if (count === null) {
-              count = 0;
-            }
-
-            count = Number(count) + 1;
-            localStorage.setItem('page_visits', count);
-
-            document.getElementById('visit-count').innerText = count;
+          fetch('https://script.google.com/macros/s/AKfycby2s__lsoU9VBZJMGb0X6CdWBSGSSLkCW35kii0WfP78FhGhUmbCNiGSfDD6x0ldH0/exec')
+            .then(res => res.text())
+            .then(count => {
+              document.getElementById('counter').innerText = count;
+            })
+            .catch(() => {
+              document.getElementById('counter').innerText = 'Error';
+            });
           </script>
       </div>
     </footer>

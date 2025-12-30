@@ -8,17 +8,6 @@
   <link rel="icon" href="assets/ntulogo.png" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<script>
-  fetch('https://api.countapi.xyz/hit/ahirra.github.io')
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById('hit-counter').innerText = data.value;
-    })
-    .catch(err => {
-      document.getElementById('hit-counter').innerText = 'Error';
-      console.error(err);
-    });
-</script>
 </head>
 <body>
   <div class="page">
@@ -221,13 +210,31 @@
     <footer class="site-footer">
       <div class="inner">
         <p>© 2025 Rajesh K. Ahir — Built with ♥. Hosted on GitHub Pages.</p>
-        <div>
-        Page Visits: <span id="hit-counter">Loading...</span>
-      </div>
+
       </div>
     </footer>
   </div>
+  <div>
+  Page Visits: <span id="view-count">Loading...</span>
+</div>
 
+<script src="https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // IMPORTANT: set this to the workspace name you created (step 1)
+    const counter = new Counter({ workspace: 'ahirra-site' });
+
+    // Increment on every page load and show it
+    counter.up('homepage')
+      .then(result => {
+        document.getElementById('view-count').textContent = result.value;
+      })
+      .catch(err => {
+        console.error('Counter error:', err);
+        document.getElementById('view-count').textContent = 'Error';
+      });
+  });
+</script>
   <script src="script.js"></script>
 </body>
 </html>

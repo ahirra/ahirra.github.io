@@ -213,8 +213,24 @@
           <div>
             Page Visits: <span id="counter">Loading...</span>
           </div>
-
           <script>
+            function doGet() {
+  const lock = LockService.getScriptLock();
+  lock.waitLock(5000); // wait up to 5s to avoid collisions
+
+  try {
+    const props = PropertiesService.getScriptProperties();
+    const current = Number(props.getProperty("page_hits") || "0");
+    const next = current + 1;
+    props.setProperty("page_hits", String(next));
+
+    return ContentService
+      .createTextOutput(String(next))
+      .setMimeType(ContentService.MimeType.TEXT);
+  } finally {
+    lock.releaseLock();
+  }
+}
           fetch('https://script.google.com/macros/s/AKfycby2s__lsoU9VBZJMGb0X6CdWBSGSSLkCW35kii0WfP78FhGhUmbCNiGSfDD6x0ldH0/exec')
             .then(res => res.text())
             .then(count => {

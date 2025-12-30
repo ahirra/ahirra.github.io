@@ -8,6 +8,22 @@
   <link rel="icon" href="assets/ntulogo.png" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script>
+  // Get the current count from localStorage, or start at 0 if null
+  let count = localStorage.getItem('page_visits');
+  if (count === null) {
+    count = 0;
+  }
+
+  // Increment the count
+  count++;
+
+  // Store the new count in localStorage
+  localStorage.setItem('page_visits', count);
+
+  // Display the count on the page
+  document.getElementById('count').textContent = count;
+</script>
 </head>
 <body>
   <div class="page">
@@ -210,6 +226,7 @@
     <footer class="site-footer">
       <div class="inner">
         <p>© 2025 Rajesh K. Ahir — Built with ♥. Hosted on GitHub Pages.</p>
+        <p>You have viewed this page <span id="count">0</span> time(s) during your browsing session.</p>
       </div>
     </footer>
   </div>

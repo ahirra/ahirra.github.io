@@ -107,3 +107,31 @@ body.dark{
   --accent:#ff8d58;
   border-color:rgba(255,255,255,0.04);
 }
+
+/* ===== Multi-page additions ===== */
+.site-name{font-size:1.05rem;margin:0;font-weight:700;color:black}
+.site-name a{color:black;text-decoration:none}
+.nav a.active{font-weight:700;border-bottom:2px solid var(--accent);padding-bottom:2px}
+.card h1{color:black;font-size:1.6rem;margin:16px 0 8px}
+.card h2{color:black;font-size:1.25rem;margin:16px 0 8px}
+.card h2.small-h{font-size:1.05rem}
+.hero h2{margin-top:6px}
+.profile-photo{display:block;width:52%;height:auto;margin:0 auto 16px;border-radius:50%}
+.breadcrumb{font-size:.85rem;color:var(--muted);margin:30px 0 0 12px}
+.breadcrumb a{color:var(--accent);text-decoration:none}
+.research-figure{margin:12px 0 14px;text-align:center}
+.research-figure img{max-width:100%;height:auto;border:1px solid #eee;border-radius:8px;background:#fff}
+.research-figure figcaption{font-size:.88rem;color:var(--muted);margin-top:6px;font-style:italic}
+.muted{color:var(--muted);font-size:.9em}
+.card p{text-align:justify}
+.paper-ref{font-size:.92rem;border-left:3px solid var(--accent);padding-left:10px;text-align:left !important}
+.tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0}
+.tags li{background:#fff;border:1px solid #eee;border-radius:999px;padding:4px 12px;font-size:.9rem}
+.toc a{color:var(--accent)}
+.pub-list li,.timeline li,.news-list li{margin-bottom:6px}
+.pub-list cite{font-style:normal}
+.quick-links li{margin-bottom:4px}
+.footer-links a{color:var(--accent);text-decoration:none;font-size:.9rem}
+.card section, .card > div{min-width:0}
+.hero .card h2{font-size:1.8rem;margin-top:6px}
+@media (max-width:600px){.card p,.lead{text-align:left !important}.breadcrumb{margin-top:20px}}

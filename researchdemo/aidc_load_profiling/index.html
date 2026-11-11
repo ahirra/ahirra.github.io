@@ -1,7 +1,20 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AI Data Center Load Profile Explorer</title>
+<title>AI Data Center Load Profile Explorer – Grid Impact Demo | Rajesh K. Ahir</title>
+<meta name="description" content="Interactive explorer of 10-minute AI data center power demand: load magnitude, variability, ramping, duration curves and operating regimes, and what they mean for the electricity grid. By Rajesh K. Ahir.">
+<meta name="author" content="Rajesh K. Ahir">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://ahirra.github.io/researchdemo/aidc_load_profiling/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Rajesh K. Ahir">
+<meta property="og:title" content="AI Data Center Load Profile Explorer – Grid Impact Demo | Rajesh K. Ahir">
+<meta property="og:description" content="Interactive explorer of 10-minute AI data center power demand: load magnitude, variability, ramping, duration curves and operating regimes, and what they mean for the electricity grid. By Rajesh K. Ahir.">
+<meta property="og:url" content="https://ahirra.github.io/researchdemo/aidc_load_profiling/">
+<meta property="og:image" content="https://ahirra.github.io/assets/rajesh-k-ahir-share.jpg">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"AI Data Center Load Profile Explorer","url":"https://ahirra.github.io/researchdemo/aidc_load_profiling/","description":"Interactive explorer of 10-minute AI data center power demand: load magnitude, variability, ramping, duration curves and operating regimes, and what they mean for the electricity grid. By Rajesh K. Ahir.","applicationCategory":"EducationalApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"author":{"@type":"Person","@id":"https://ahirra.github.io/#person","name":"Rajesh K. Ahir","url":"https://ahirra.github.io/"},"isPartOf":{"@type":"WebSite","url":"https://ahirra.github.io/","name":"Rajesh K. Ahir"}}</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
 :root{--ink:#1b2733;--mut:#5d6b7a;--bg:#f3f5f8;--card:#fff;--acc:#0b7a75;--navy:#12263f;--line:#dde3ea}
@@ -637,4 +650,10 @@ $('worst').onclick=()=>jump(ST.days.reduce((a,b)=>b.am>a.am?b:a));$('calm').oncl
 document.querySelector('.pre').onclick=e=>{const p=e.target.dataset.p;if(!p)return;const[a,b,c,d]=p.split(',');$('season').value=a;$('dtype').value=b;$('scale').value=c;$('lim').value=d;render()};
 addEventListener('resize',()=>{if(tab=='heat')render()});
 $('submit').click();
-</script></body></html>
+</script>
+<div style="text-align:center;font:13px/1.5 system-ui,sans-serif;padding:14px;opacity:.85">
+  Built by <a href="https://ahirra.github.io/" style="color:inherit;font-weight:600">Rajesh K. Ahir</a> ·
+  <a href="https://ahirra.github.io/researchdemo.html" style="color:inherit">More research demos</a> ·
+  <a href="https://ahirra.github.io/#publications" style="color:inherit">Publications</a>
+</div>
+</body></html>
